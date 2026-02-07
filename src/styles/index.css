@@ -1,0 +1,178 @@
+:root {
+  /* Core Colors - Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  /* gray-50 */
+  --bg-tertiary: #f3f4f6;
+  /* gray-100 */
+  --text-primary: #111827;
+  /* gray-900 */
+  --text-secondary: #4b5563;
+  /* gray-600 */
+  --text-light: #9ca3af;
+  /* gray-400 */
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  /* gray-200 */
+
+  /* Accent Colors (Shared) */
+  --accent-from: #6366f1;
+  /* Indigo 500 */
+  --accent-to: #06b6d4;
+  /* Cyan 500 */
+  --accent-gradient: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+
+  /* Status Colors */
+  --success-bg: #d1fae5;
+  --success-text: #065f46;
+  --purple-bg: #ede9fe;
+  --purple-text: #5b21b6;
+
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 80px;
+  --border-radius-lg: 1.5rem;
+  --border-radius-xl: 3rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-accent: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="dark"] {
+  /* Core Colors - Dark Theme */
+  --bg-primary: #0f172a;
+  /* slate-900 */
+  --bg-secondary: #1e293b;
+  /* slate-800 */
+  --bg-tertiary: #334155;
+  /* slate-700 */
+  --text-primary: #f9fafb;
+  /* gray-50 */
+  --text-secondary: #d1d5db;
+  /* gray-300 */
+  --text-light: #9ca3af;
+  /* gray-400 */
+  --card-bg: #1e293b;
+  /* slate-800 */
+  --border-color: #334155;
+  /* slate-700 */
+
+  /* Shadows - Adjusted for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --shadow-accent: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+
+  /* Status Colors - Adjusted */
+  --purple-bg: rgba(139, 92, 246, 0.2);
+  --purple-text: #a78bfa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography Utilities */
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* Button Styles - Clavien Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  /* Pill shape */
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+}
+
+.btn-secondary {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-from);
+  color: var(--accent-from);
+}
+
+/* Card Utilities */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-color);
+}
