@@ -52,7 +52,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className="about-container" style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1fr) 2fr', gap: '4rem', alignItems: 'start' }}>
+                <div className="about-container" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
                     <div className="about-image-wrapper animate-on-scroll">
                         <div className="card" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
                             <div style={{
@@ -128,7 +128,7 @@ const About = () => {
 
                         <div>
                             <h4 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '1rem' }}>Langues</h4>
-                            <div style={{ display: 'flex', gap: '1rem' }}>
+                            <div className="languages-container" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                                 {languages.map((lang, index) => (
                                     <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                         <FaGlobe style={{ color: 'var(--text-light)' }} />

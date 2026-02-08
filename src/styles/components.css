@@ -848,3 +848,247 @@
         opacity: 0;
     }
 }
+
+/* ==========================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ========================================== */
+
+/* Medium screens and below (tablets) */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-container {
+        gap: 2rem;
+    }
+
+    .hero-image-circle {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+
+    /* Container padding for mobile */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Hero Section - Mobile */
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 1rem);
+        padding-bottom: 2rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image-wrapper-new {
+        order: 1;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin: 0 auto 2rem;
+    }
+
+    .hero-greeting-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-image-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
+    }
+
+    /* About Section - Mobile */
+    .about-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Skills Section - Mobile */
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .skill-category-card {
+        padding: 1.5rem;
+    }
+
+    /* Projects Grid - Mobile */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .project-card-header {
+        padding: 1.5rem 1.5rem 0.75rem;
+    }
+
+    .project-card-body {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    /* Education Grid - Mobile */
+    .education-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .edu-card {
+        padding: 1.5rem;
+    }
+
+    .edu-year-badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Contact Section - Mobile */
+    .contact-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-form-wrapper {
+        order: 1;
+    }
+
+    /* Form elements - single column on mobile */
+    form .form-row,
+    form>div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Card adjustments */
+    .card {
+        padding: 1.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Languages section wrapping */
+    .languages-container {
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Tabs container */
+    .tabs-container {
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-image-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .skill-pills {
+        gap: 0.5rem;
+    }
+
+    .skill-pill {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .project-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    .edu-icon-bg {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}

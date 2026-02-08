@@ -53,7 +53,7 @@ const Contact = () => {
                     </p>
                 </div>
 
-                <div className="contact-container" style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1fr) 2fr', gap: '4rem' }}>
+                <div className="contact-container" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem' }}>
                     <div className="contact-info" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                         {contactInfo.map((info, index) => (
                             <div key={index} className="card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem' }}>
@@ -72,7 +72,7 @@ const Contact = () => {
 
                     <form className="card" onSubmit={handleSubmit} style={{ padding: '3rem' }}>
                         <h3 style={{ marginBottom: '2rem', fontSize: '1.5rem', fontWeight: '700' }}>Envoyer un message</h3>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+                        <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                             <div className="form-group">
                                 <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Nom complet</label>
                                 <input

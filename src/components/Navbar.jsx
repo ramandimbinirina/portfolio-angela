@@ -86,12 +86,12 @@ const Navbar = () => {
             top: var(--header-height);
             left: 0;
             width: 100%;
-            background: white;
+            background: var(--card-bg);
             padding: 2rem;
             flex-direction: column;
-            border-bottom: 1px solid #f3f4f6;
+            border-bottom: 1px solid var(--border-color);
             transform: translateY(-150%);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background 0.3s ease;
             box-shadow: var(--shadow-md);
             display: flex;
             align-items: center;
@@ -99,7 +99,8 @@ const Navbar = () => {
           }
           .nav-menu.active { transform: translateY(0); }
           .nav-links { flex-direction: column; align-items: center; gap: 1.5rem; }
-          .nav-menu .btn { margin-left: 0 !important; width: 100%; }
+          .nav-menu .btn { margin-left: 0 !important; width: 100%; max-width: 200px; }
+          .theme-toggle-btn { order: -1; }
         }
       `}</style>
         </nav>

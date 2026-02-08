@@ -49,7 +49,7 @@ const Skills = () => {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
+                <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
                     {skillCategories.map((category, index) => (
                         <div key={index} className="skill-category-card">
                             <div className="skill-header">
