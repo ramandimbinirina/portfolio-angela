@@ -1144,3 +1144,349 @@
         font-size: 1rem;
     }
 }
+
+/* ==========================================
+   STATS SECTION (MODERN REDESIGN)
+   ========================================== */
+
+.stats-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    /* Use theme-aware background instead of solid gradient */
+    background: var(--bg-secondary);
+}
+
+/* Optional: Add a subtle mesh gradient for depth */
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.stats-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    right: -20%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-card {
+    /* Glassmorphic card styling matching theme */
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect: Lift + Glow + Border Highlight */
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-icon {
+    /* Icon inside a glowing circle */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--purple-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent-from);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3);
+}
+
+.stat-value {
+    /* Big Gradient Number */
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.stat-value span {
+    font-size: 2.5rem;
+    /* Suffix size */
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+.stat-label {
+    /* Clean Label */
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+}
+
+/* Stats responsive adjustments */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-section {
+        padding: 4rem 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 3rem;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+}
+
+/* ==========================================
+   LOADING STATE
+   ========================================== */
+
+.app.loading {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* ==========================================
+   ENHANCED SCROLL ANIMATIONS
+   ========================================== */
+
+/* Staggered animations for cards */
+.skill-category-card,
+.project-card-modern,
+.edu-card,
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease forwards;
+}
+
+.skill-category-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-category-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-category-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-category-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-category-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-category-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.skill-category-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.project-card-modern:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card-modern:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card-modern:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.project-card-modern:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.edu-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.edu-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.edu-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.edu-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth section transitions */
+.section {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.section:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.section:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.section:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+.section:nth-of-type(4) {
+    animation-delay: 0.3s;
+}
+
+.section:nth-of-type(5) {
+    animation-delay: 0.4s;
+}
+
+.section:nth-of-type(6) {
+    animation-delay: 0.5s;
+}
+
+.section:nth-of-type(7) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero section specific animations */
+.hero-content {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.hero-image-wrapper-new {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -31,8 +31,7 @@ const Education = () => {
             year: '2022 - 2023',
             title: 'Licence Professionnelle en Informatique',
             institution: 'Ecole Nationale d\'Informatique Université de Fianarantsoa',
-            mention: 'Parcours : Informatique Générale',
-            mention: 'Mention BIEN',
+            mention: 'Parcours : Informatique Générale - Mention BIEN',
             icon: <FaAward />,
             color: '#8b5cf6' // Violet
         },
@@ -192,7 +191,10 @@ const Education = () => {
                             <div className="cert-image-wrapper" style={{ height: '180px', overflow: 'hidden', borderBottom: '1px solid var(--border-color)' }}>
                                 <img
                                     src={cert.image}
-                                    alt={cert.title}
+                                    alt={`Certificat ${cert.title}`}
+                                    loading="lazy"
+                                    width="300"
+                                    height="180"
                                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
                                     onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
                                     onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
