@@ -24,7 +24,7 @@ const About = () => {
 
     const infoItems = [
         { icon: <FaMapMarkerAlt />, label: 'Localisation', value: 'Antananarivo, Madagascar' },
-        { icon: <FaGraduationCap />, label: 'Formation', value: 'Master Recherche IA' },
+        { icon: <FaGraduationCap />, label: 'Formation', value: 'Master Recherche en IA' },
         { icon: <FaBriefcase />, label: 'Statut', value: 'Active sur le marché' },
         { icon: <FaEnvelope />, label: 'Email', value: 'angelaramandimbinirina@gmail.com' },
     ]
@@ -77,7 +77,7 @@ const About = () => {
                                 padding: '1rem',
                                 borderRadius: '1rem'
                             }}>
-                                <span style={{ display: 'block', fontSize: '1.5rem', fontWeight: '800', color: 'var(--accent-from)' }}>3+</span>
+                                <span style={{ display: 'block', fontSize: '1.5rem', fontWeight: '800', color: 'var(--accent-from)' }}>1+</span>
                                 <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Années d'expérience</span>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ const About = () => {
 
                     <div className="about-content animate-on-scroll" style={{ transitionDelay: '200ms' }}>
                         <h3 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
-                            Concevoir l'Avenir avec <span className="text-gradient">l'Intelligence Artificielle et la Data</span>
+                            Concevoir l'Avenir avec <span className="text-gradient">l'Intelligence Artificielle et la DATA</span>
                         </h3>
 
                         <p style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>

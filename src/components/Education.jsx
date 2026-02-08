@@ -6,23 +6,32 @@ const Education = () => {
         {
             year: '2026',
             title: 'Master Recherche en IA',
-            institution: 'ENI Fianarantsoa',
+            institution: 'Ecole Nationale d\'Informatique  Université de Fianarantsoa',
             mention: 'En cours',
             icon: <FaGraduationCap />,
             color: '#6366f1' // Indigo
         },
         {
             year: '2024 - 2025',
-            title: 'Master II Pro en Informatique',
-            institution: 'ENI Fianarantsoa',
+            title: 'Master II Professionnelle en Informatique',
+            institution: 'Ecole Nationale d\'Informatique  Université de Fianarantsoa',
+            mention: 'Parcours : Informatique Générale',
+            icon: <FaUniversity />,
+            color: '#06b6d4' // Cyan
+        },
+        {
+            year: '2023 - 2024',
+            title: 'Master I Professionnelle en Informatique',
+            institution: 'Ecole Nationale d\'Informatique  Université de Fianarantsoa',
             mention: 'Parcours : Informatique Générale',
             icon: <FaUniversity />,
             color: '#06b6d4' // Cyan
         },
         {
             year: '2022 - 2023',
-            title: 'Licence Pro en Informatique',
-            institution: 'Université de Fianarantsoa',
+            title: 'Licence Professionnelle en Informatique',
+            institution: 'Ecole Nationale d\'Informatique Université de Fianarantsoa',
+            mention: 'Parcours : Informatique Générale',
             mention: 'Mention BIEN',
             icon: <FaAward />,
             color: '#8b5cf6' // Violet
@@ -30,7 +39,7 @@ const Education = () => {
         {
             year: '2018 - 2019',
             title: 'Baccalauréat Série D',
-            institution: 'Lycée Saint Joseph de Cluny',
+            institution: 'Lycée Saint Joseph de Cluny Tambohobe Fianarantsoa',
             mention: 'Mention ASSEZ-BIEN',
             icon: <FaBook />,
             color: '#10b981' // Emerald

@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import './styles/components.css'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <Contact />
                 </main>
                 <Footer />
+                <ScrollToTop />
             </div>
         </ThemeProvider>
     )
