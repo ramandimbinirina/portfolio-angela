@@ -120,8 +120,8 @@
 /* Mobile Adjustments for Nav */
 @media (max-width: 992px) {
     .nav-links {
-        display: none;
-        /* Hide desktop links */
+        gap: 1rem;
+        /* Reduce gap on tablet */
     }
 }
 
